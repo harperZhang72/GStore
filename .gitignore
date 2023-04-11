@@ -1,3 +1,4 @@
+# .gitignore 分布式版本控制系统git的配置文件 => 忽略提交
 target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -9,3 +10,16 @@ buildNumber.properties
 .mvn/timing.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
+# mvnw => maven wrapper script 允许在没有安装maven或者maven版本不兼容的条件下运行maven的命令
+# mvnw在maven-wrapper.properties文件中记录使用的maven版本
+# 当用户执行mvnw clean命令时,若当前用户的maven版本与期望版本不一致,则下载期望版本来执行mvn命令
+# mvn.cmd=>执行mvnw命令的cmd入口
+# mvn文件夹存放maven-wrapper.properties和相关jar包以及名为MavenWrapperDownloader的java文件
+# mvnw文件适用于Linux环境, mvnw.cmd适用于Windows环境
+**/mvnw
+**/mvnw.cmd
+**/.mvn
+# target包经过编译生成
+**/target/
+.idea
+**/.gitignore
